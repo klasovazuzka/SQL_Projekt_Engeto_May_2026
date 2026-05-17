@@ -33,8 +33,7 @@ LEFT JOIN (
 	FROM economies e
 	WHERE YEAR >= 2000 ) t2 
 ON country_countries = country_economy;
-
+----------------------------------------------------------------------
 SELECT *
 FROM t_zuzana_klasova_project_sql_secondary_final;
--------------------------------------------------------------------
 
