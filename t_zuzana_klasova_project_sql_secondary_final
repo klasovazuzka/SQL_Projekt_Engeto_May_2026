@@ -1,21 +1,8 @@
---Náhled datasetu (tabulek)--
-SELECT *
-FROM czechia_price cpr;
-
-SELECT *
-FROM czechia_price_category cpc;
-
-SELECT *
-FROM czechia_payroll cp;
-
-SELECT *
-FROM czechia_payroll_industry_branch cpib;
--------------------------------------------------------------------------
-
+-- Náhled datasetu (tabulek) --
 SELECT *
 FROM countries c;
 
--- Omezení tabulky pouze na EU státy.
+-- Omezení tabulky pouze na EU státy --
 SELECT *
 FROM countries c 
 WHERE continent = 'Europe'
@@ -24,14 +11,15 @@ AND country IS NOT NULL;
 SELECT *
 FROM economies e;
 
--- Z tabulky me zajimaji jen nektere udaje: zeme, populace, gdp, gini, rok
+--- Z tabulky me zajimaji jen nektere udaje: zeme, populace, gdp, gini, rok ---
 SELECT 
 	e.country, e.population, e.YEAR, e.gdp, e.gini
 	FROM economies e
 	WHERE YEAR >= 2000;
-------------------------------------------------------------------------------------------
--- Vytvoreni tabulky t_zuzana_klasova_project_sql_secondary_final--
--- Zadani: Vytvorte tabulku pro dodatečná data o dalších evropských státech--
+------------------------------------------------------------------------------
+
+-- Zadani: Vytvorte tabulku pro dodatečná data o dalších evropských státech --
+-- Vytvoreni tabulky t_zuzana_klasova_project_sql_secondary_final --
 
 CREATE TABLE t_zuzana_klasova_project_sql_secondary_final AS 
 SELECT t1.continent, country_countries, country_economy, t2.YEAR, t2.gdp, t2.gini, t2.population
@@ -48,5 +36,5 @@ ON country_countries = country_economy;
 
 SELECT *
 FROM t_zuzana_klasova_project_sql_secondary_final;
---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------
 
