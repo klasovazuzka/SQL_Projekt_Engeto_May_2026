@@ -2,7 +2,7 @@
 
 CREATE TABLE t_zuzana_klasova_project_SQL_primary_final AS
 WITH wages AS (
-    --- Připravíme si čistá data o mzdách ---
+    ---Čistá data o mzdách---
     SELECT 
         cp.payroll_year AS year,
         cpib.name AS industry_branch,
@@ -15,7 +15,7 @@ WITH wages AS (
       AND cp.industry_branch_code IS NOT NULL --Zbavíme se NULL hodnot--
 ),
 prices AS (
---Připravíme si čistá data o cenách--
+--Čistá data o cenách--
     SELECT 
         EXTRACT(YEAR FROM cpr.date_from) AS year, 
         cpc.name AS food_category,
