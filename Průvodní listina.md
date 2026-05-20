@@ -32,4 +32,6 @@ Výzkumné otázky:
 5) Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
 
 Odpovědi:
+1)
 
+2)Během sledovaného období (r. 2006–2018) se celková kupní síla a dostupnost obou základních potravin zlepšila. Ačkoliv absolutní ceny chleba i mléka vzrostly, průměrná mzda stoupala rychlejším tempem. Díky tomu si průměrně vydělávající občan mohl v roce 2018 ze své výplaty koupit o 52 kg chleba (celkem 1 365 kg) a o 204 litrů mléka (celkem 1 670 l) více než na začátku srovnatelného období v roce 2006.
