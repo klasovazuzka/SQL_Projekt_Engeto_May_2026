@@ -34,4 +34,6 @@ Výzkumné otázky:
 Odpovědi:
 1)
 
-2)Během sledovaného období (r. 2006–2018) se celková kupní síla a dostupnost obou základních potravin zlepšila. Ačkoliv absolutní ceny chleba i mléka vzrostly, průměrná mzda stoupala rychlejším tempem. Díky tomu si průměrně vydělávající občan mohl v roce 2018 ze své výplaty koupit o 52 kg chleba (celkem 1 365 kg) a o 204 litrů mléka (celkem 1 670 l) více než na začátku srovnatelného období v roce 2006.
+2) Během sledovaného období (r. 2006–2018) se celková kupní síla a dostupnost obou základních potravin zlepšila. Ačkoliv absolutní ceny chleba i mléka vzrostly, průměrná mzda stoupala rychlejším tempem. Díky tomu si průměrně vydělávající občan mohl v roce 2018 ze své výplaty koupit o 52 kg chleba (celkem 1 365 kg) a o 204 litrů mléka (celkem 1 670 l) více než na začátku srovnatelného období v roce 2006.
+
+3) Na základě provedené analýzy dat je kategorií potravin, která zdražuje nejpomaleji, vepřová pečeně s kostí, u níž je průměrný meziroční nárůst ceny jen 0,1 %.
