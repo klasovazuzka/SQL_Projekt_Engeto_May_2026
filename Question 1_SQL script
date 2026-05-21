@@ -3,28 +3,33 @@ SELECT *
 FROM t_zuzana_klasova_project_SQL_primary_final;
 -------------------------------------------------------------
 --1.Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?--
-WITH wage_trends AS (
-    -- 1. Krok: Získám unikátní záznamy pro každý rok a odvětví a přiřadím mzdu z předchozího roku
+WITH unique_wages AS (
+    -- 1. Krok: Nejprve získám data pro každý rok a odvětví --
+    SELECT 
+        year,
+        industry_branch,
+        avg_wage
+    FROM t_zuzana_klasova_project_sql_primary_final
+    WHERE industry_branch IS NOT NULL
+    GROUP BY year, industry_branch, avg_wage
+),
+wage_trends AS (
+    -- 2. Krok: Spočítám loňskou mzdu pomocí fce LAG --
     SELECT 
         year,
         industry_branch,
         avg_wage,
-        -- Funkce LAG mi pro každé odvětví (PARTITION BY) seřazené podle času (ORDER BY) najde loňskou mzdu
         LAG(avg_wage) OVER (PARTITION BY industry_branch ORDER BY year) AS prev_year_wage
-    FROM t_zuzana_klasova_project_sql_primary_final
-    WHERE industry_branch IS NOT NULL
-    -- Používám GROUP BY, abych odstranila případné duplicity
-    GROUP BY year, industry_branch, avg_wage
+    FROM unique_wages
 )
--- 2. Krok: Vypočítám rozdíl a určím trend
+-- 3. Krok: Výpočet rozdílů a určení trendu --
+-- použiji fci numeric (: : + přetypovací typ) pro přesná čísla s pevnou desetinnou čárkou -- 
 SELECT 
     year AS rok,
     industry_branch AS odvetvi,
-    -- Opět využiji ::numeric pro jistotu, aby funkce ROUND fungovala bezchybně
     ROUND(avg_wage::numeric, 0) AS prumerna_mzda,
     ROUND(prev_year_wage::numeric, 0) AS mzda_predchozi_rok,
     ROUND((avg_wage - prev_year_wage)::numeric, 0) AS rozdil_v_kc,
-    -- Vyhodnocení, zda mzda rostla nebo klesla pomocí CASE
     CASE 
         WHEN prev_year_wage IS NULL THEN 'První rok v datech'
         WHEN avg_wage > prev_year_wage THEN 'Růst'
