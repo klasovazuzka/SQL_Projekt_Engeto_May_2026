@@ -1,5 +1,7 @@
-
-
+--Náhled primární tabulky--
+SELECT * 
+FROM t_zuzana_klasova_project_SQL_primary_final;
+----------------------------------------------------------------------------------------------------------------------------------------------
 -- 2. Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd? --
 -- Zjištění prvního a posledního roku přímo z primární tabulky --
 WITH min_max_years AS (
