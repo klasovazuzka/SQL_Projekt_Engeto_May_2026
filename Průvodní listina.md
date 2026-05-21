@@ -41,7 +41,7 @@ Odpovědi:
 
 4) Na základě analyzovaných dat neexistuje ve sledovaném období (r.2007–2018) žádný rok, ve kterém by meziroční nárůst cen potravin převýšil růst mezd o více než 10 %. Největší rozdíl byl zaznamenán v roce 2013, kdy ceny rostly o 7,11 % rychleji než mzdy, ale ani zde nebyla desetiprocentní hranice překročena.
 
-5) Shrnutí:
+5)
 Výrazný pokles HDP v roce 2009 (o -4,66 %) se okamžitě projevil propadem cen potravin (o -6,81 %) a zpomalením růstu mezd (spadly z více než 7% růstu v předchozích letech na 3,07 %).
 Výrazný růst HDP v roce 2017 (5,17 %) byl provázen silným nárůstem cen potravin (9,98 %) a růstem mezd (6,17 %), který pak ještě akceleroval v roce 2018 na 7,7 %.
 Ukazuje se, že HDP není jediným hybatelem. V roce 2015 HDP rostlo velmi rychle (5,39 %), ale ceny potravin naopak klesaly (-0,56 %) a růst mezd byl spíše mírný (2,6 %).
