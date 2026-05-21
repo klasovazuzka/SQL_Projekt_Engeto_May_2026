@@ -38,3 +38,31 @@ SELECT
     END AS trend
 FROM wage_trends
 ORDER BY odvetvi, rok;
+-------------------------------------------------------------------------------------------------------------------------
+-- Díky řazení ORDER BY mezirocni_rozdil_czk ASC vidím ihned největší propady v historii odvětví měřených dat --
+
+WITH annual_wages AS (
+    SELECT DISTINCT 
+        year,
+        industry_branch,
+        avg_wage
+    FROM t_zuzana_klasova_project_sql_primary_final
+    WHERE industry_branch IS NOT NULL
+),
+lagged_wages AS (
+    SELECT 
+        year,
+        industry_branch,
+        avg_wage AS mzda_aktualni_rok,
+        LAG(avg_wage) OVER (PARTITION BY industry_branch ORDER BY year) AS mzda_predchozi_rok
+    FROM annual_wages
+)
+SELECT 
+    year AS rok,
+    industry_branch AS odvetvi,
+    mzda_predchozi_rok,
+    mzda_aktualni_rok,
+    (mzda_aktualni_rok - mzda_predchozi_rok) AS mezirocni_rozdil_czk
+FROM lagged_wages
+WHERE (mzda_aktualni_rok - mzda_predchozi_rok) < 0  -- Filtruji pouze poklesy --
+ORDER BY mezirocni_rozdil_czk ASC;
