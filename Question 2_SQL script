@@ -1,20 +1,22 @@
---2. Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?--
--- Zjištění prvního a posledního roku přímo z primární tabulky
+
+
+-- 2. Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd? --
+-- Zjištění prvního a posledního roku přímo z primární tabulky --
 WITH min_max_years AS (
     SELECT 
         MIN(year) AS min_year,
         MAX(year) AS max_year
     FROM t_zuzana_klasova_project_sql_primary_final
-    --beru jen roky, kde mám jak mzdy, tak ceny
+    -- beru jen roky, kde mám jak mzdy, tak ceny --
     WHERE avg_price IS NOT NULL AND avg_wage IS NOT NULL
 )
 SELECT 
     year AS rok,
     food_category AS potravina,
-    -- Zprůměruju cenu a mzdu pro jistotu, kdyby tam bylo více záznamů za odvětví
+    -- Zprůměruju cenu a mzdu pro jistotu, kdyby tam bylo více záznamů za odvětví --
     ROUND(AVG(avg_price)::numeric, 2) AS cena_za_jednotku,
     ROUND(AVG(avg_wage)::numeric, 0) AS prumerna_mzda,
-    -- Samotný výpočet koupěschopnosti
+    -- Samotný výpočet koupěschopnosti --
     ROUND((AVG(avg_wage) / AVG(avg_price))::numeric, 0) AS kolik_si_koupim
 FROM t_zuzana_klasova_project_sql_primary_final
 WHERE year IN (
