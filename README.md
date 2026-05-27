@@ -1,4 +1,9 @@
-🗂 Datové podklady
+### Projekt: Analýza dostupnosti potravin a vývoje mezd v ČR
+Na analytickém oddělení nezávislé společnosti zabývající se životní úrovní občanů jsme zpracovali robustní datové podklady pro tiskové oddělení. Cílem projektu je zodpovědět definované výzkumné otázky týkající se dostupnosti základních potravin široké veřejnosti v závislosti na průměrných příjmech za určité časové období. Výsledky budou prezentovány na oborové konferenci.
+
+Součástí analýzy je i srovnání makroekonomických ukazatelů (HDP, GINI koeficient, populace) s dalšími evropskými státy ve stejném období.
+
+### 🗂 Datové podklady
 Pro vypracování analýzy byly využity sady z Portálu otevřených dat ČR a další globální databáze.
 
 Primární tabulky
@@ -26,14 +31,14 @@ countries – Geografické a kulturní informace o zemích (hlavní město, měn
 
 economies – Makroekonomické ukazatele (HDP, GINI, daňová zátěž) pro daný stát a rok.  
 
-🎯 Výstupy projektu
+### 🎯 Výstupy projektu
 Výstupem analýzy je sada SQL skriptů a dvě finální databázové tabulky sloužící jako podklad pro zodpovězení výzkumných otázek:  
 
 t_{jmeno}_{prijmeni}_project_SQL_primary_final – Sjednocená data mezd a cen potravin za ČR za totožné porovnatelné období (společné roky).
 
 t_{jmeno}_{prijmeni}_project_SQL_secondary_final – Dodatečná makroekonomická data o dalších evropských státech.
 
-📊 Výzkumné otázky a závěry analýzy
+### 📊 Výzkumné otázky a závěry analýzy
 1. Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
 Při pouhém srovnání počátečního roku 2007 a konečného roku 2018 průměrné mzdy vzrostly plošně. Zaměříme-li se však na detailní meziroční vývoj, růst nebyl nepřetržitý. V dlouhodobém horizontu byla řada odvětví (zejména finanční sektor, energetika a těžký průmysl) zasažena ekonomickými výkyvy.
 
