@@ -37,5 +37,3 @@ t_zuzana_klasova_project_SQL_secondary_final – Dodatečná makroekonomická da
 
 # 📊 Výzkumné otázky a závěry analýzy
 
-
-Závěr: Růst HDP zpravidla vytváří prostor pro růst mezd a cen, ale nemusí se to nutně a v plné síle projevit ve stejném nebo bezprostředně následujícím roce.
